@@ -24,13 +24,15 @@ def termToFloatValues(term:str) ->list:
     absGlied =list(filter(lambda x: "x" not in x,glieder))
     ##print("absglied",absGlied)
     if len(absGlied) >0:
-        returnGlieder.append([float(absGlied[0]),1.0,False])
+        returnGlieder.append([float(absGlied[0]),0.0,False])
 
     return returnGlieder
 
-def main():
+def main(term="x^3 -11x^2 +39x -45"):
     term ="x^3 -x^2 -21x +45"
-    print(termToFloatValues(term))
+    floatedMember =termToFloatValues(term)
+    print("term:",floatedMember)
+    return floatedMember
 
 if __name__ == '__main__':
     main()
