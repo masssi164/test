@@ -1,0 +1,19 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Kurvendiskussion
+    body
+        h1 Termeingabe 
+        p#hinweis Bitte einen Term nach dem Shema <br /> f(x) =x^2 -2x +5 <br />eingeben:
+        form(action="" method="post")
+            label#inputLabel termeingeben
+                input(type="text" name="Term") 
+            label berechnungsspannweite 
+                label Start
+                    input(type="text" value="-20" name="Start")
+                label Ende
+                    input(type="text", name="End" value="20")
+                label Rundungstiefe
+                    input(type="text", name="Deepness" value="3")
+            input(type="submit" value="absenden")
